@@ -1,0 +1,1 @@
+https://github.com/g-roger/desafios-fiap/blob/master/python/2-desafio/desafio_2.ipynb
