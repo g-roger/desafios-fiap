@@ -217,6 +217,79 @@ summary(modelo)
 
 arquivo$temp_atemp = NULL
 
+
+#Bike$season1 =season
+#categoria de referencia
+#Bike$season1 =ifelse(season==1,"1","0")
+arquivo$season2 =arquivo$season
+arquivo$season2 =ifelse(arquivo$season==2,"1","0")
+arquivo$season3 =arquivo$season
+arquivo$season3 =ifelse(arquivo$season==3,"1","0")
+arquivo$season4 =arquivo$season
+arquivo$season4 =ifelse(arquivo$season==4,"1","0")
+
+# Criar variaveis dicotomicas
+#arquivo$season1 =season
+#categoria de referencia
+#arquivo$season1 =ifelse(season==1,"1","0")
+#arquivo$season2 =season
+#arquivo$season2 =ifelse(season==2,"1","0")
+#arquivo$season3 =season
+#arquivo$season3 =ifelse(season==3,"1","0")
+#arquivo$season4 =season
+#arquivo$season4 =ifelse(season==4,"1","0")
+#categoria de referencia
+#arquivo$weathersit1 =weathersit
+#arquivo$weathersit1 =ifelse(weathersit==1,"1","0")
+arquivo$weathersit2 =weathersit
+arquivo$weathersit2 =ifelse(weathersit==2,"1","0")
+arquivo$weathersit3 =weathersit
+arquivo$weathersit3 =ifelse(weathersit==3,"1","0")
+
+
+#categoria de referencia
+#arquivo$mnth1 =mnth
+#arquivo$mnth1 =ifelse(mnth==1,"1","0")
+arquivo$mnth2 =mnth
+arquivo$mnth2 =ifelse(mnth==2,"1","0")
+arquivo$mnth3 =mnth
+arquivo$mnth3 =ifelse(mnth==3,"1","0")
+arquivo$mnth4 =mnth
+arquivo$mnth4 =ifelse(mnth==4,"1","0")
+arquivo$mnth5 =mnth
+arquivo$mnth5 =ifelse(mnth==5,"1","0")
+arquivo$mnth6 =mnth
+arquivo$mnth6 =ifelse(mnth==6,"1","0")
+arquivo$mnth7 =mnth
+arquivo$mnth7 =ifelse(mnth==7,"1","0")
+arquivo$mnth8 =mnth
+arquivo$mnth8 =ifelse(mnth==8,"1","0")
+arquivo$mnth9 =mnth
+arquivo$mnth9 =ifelse(mnth==9,"1","0")
+arquivo$mnth10 =mnth
+arquivo$mnth10 =ifelse(mnth==10,"1","0")
+arquivo$mnth11 =mnth
+arquivo$mnth11 =ifelse(mnth==11,"1","0")
+arquivo$mnth12 =mnth
+arquivo$mnth12 =ifelse(mnth==12,"1","0")
+
+
+# Apaga a coluna 
+arquivo$season = NULL
+arquivo$mnth = NULL
+arquivo$weathersit = NULL
+arquivo$weekday = NULL
+
+
+
+view(arquivo)
+
+
+
+# Regresslão linear múltipla quanti
+modelo <- lm(cnt ~ season2 + season3 + season4,data=arquivo)
+summary(modelo)
+
 # Modelo 
 
 #Dividir em duas amostras
