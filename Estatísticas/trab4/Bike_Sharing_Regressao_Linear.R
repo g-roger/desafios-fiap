@@ -278,7 +278,7 @@ arquivo$mnth12 =ifelse(mnth==12,"1","0")
 arquivo$season = NULL
 arquivo$mnth = NULL
 arquivo$weathersit = NULL
-arquivo$weekday = NULL
+arquivo$weekday = NULL # o ideal era manter
 
 
 
@@ -286,7 +286,7 @@ view(arquivo)
 
 
 
-# Regresslão linear múltipla quanti
+# Regressão linear múltipla quanti
 modelo <- lm(cnt ~ season2 + season3 + season4,data=arquivo)
 summary(modelo)
 
@@ -437,7 +437,7 @@ qqline(residuals(modelo2_stepwise))
 
 # Teste de hipóteses
 # H0: Distribuicao Normal
-# H1: Distribuição diferente da Normal
+# H1: Distribuição diferente da NormaL
 
 shapiro.test(residuals(modelo2_stepwise))
 
@@ -458,8 +458,26 @@ hist(residuo_valid)
 qqnorm(residuo_valid, ylab="Resíduos",xlab="Quantis teóricos",main="")
 qqline(residuo_valid)
 
+x = 0.099 + 1.308 - 0.105 + 1.067 + 0.580 + 0.455 - 0.264
+p1 = exp(x)/(1+exp(x))
 
+y = 0.099 - 1.276 - 0.105 - 1.069 - 0.264 - 0.413 + 0.581
+p2 = exp(y)/(1+exp(y))
+
+z = 0.099 - 0.611 + 0.262 + 0.371 + 0.580 + 0.080 + 0.401
+p3 = exp(z)/(1+exp(z))
 
 # Erro quadratico medio na amostra de validacao
 mse2 <- mean((ValidSet_pred$cnt - ValidSet_pred$fit)^2)
 sqrt(mse2)
+
+kk = 0.099 - 1.276 -0.718 - 0.261 -0.718 -1.069 - 0.413
+propensao = exp(kk)/1+exp(kk)
+
+c = 0.099 + 1.308+0.580+0.262+0.581+1.067+0.455
+propensao = exp(c)/(1+exp(c) )
+
+propensao = ex
+
+exp(c)
+?exp

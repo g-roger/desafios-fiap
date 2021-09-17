@@ -14,4 +14,3 @@ psi = function(data){
 datapsi$vPsi = psi(datapsi[,4:5])
 datapsi
 sum(datapsi$vPsi)
-
