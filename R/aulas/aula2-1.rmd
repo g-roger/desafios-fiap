@@ -1,0 +1,39 @@
+---
+title: "german_credit"
+author: "groger"
+date: "10/08/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown Cars
+
+Summary:
+
+```{r cars}
+summary(cars)
+```
+
+Head:
+
+```{r cars}
+head(cars)
+```
+
+Tail:
+
+```{r cars}
+tail(cars)
+```
+
+
+Gráfico simples:
+
+```{r cars, echo=FALSE}
+plot(cars)
+```
